@@ -20,6 +20,9 @@ class LoginViewController: UIViewController {
     var password: String? {
         return loginView.passwordTextField.text
     }
+    
+    let titleLabel = UILabel()
+    let subtitleLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,13 +48,45 @@ extension LoginViewController {
         errorMessageLablel.textColor = .systemRed
         errorMessageLablel.numberOfLines = 0
         errorMessageLablel.isHidden = true
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = .systemRed
+        titleLabel.font = .systemFont(ofSize: CGFloat(40))
+        titleLabel.numberOfLines = 1
+        titleLabel.text = "Banker"
+        
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.textColor = .systemRed
+        subtitleLabel.font = .systemFont(ofSize: CGFloat(30))
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.text = "Your premium source for all things banking!"
     }
     
     private func layout() {
+        view.addSubview(titleLabel)
+        view.addSubview(subtitleLabel)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLablel)
         
+        // Title Label
+        NSLayoutConstraint.activate([
+//            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            titleLabel.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 20),
+            titleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: titleLabel.trailingAnchor, multiplier: 1)
+        ])
+        
+        // Subtitle Label
+        NSLayoutConstraint.activate([
+//            subtitleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 1),
+            subtitleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: subtitleLabel.trailingAnchor, multiplier: 1)
+        ])
+
         // LoginView
         NSLayoutConstraint.activate([
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -94,6 +129,15 @@ extension LoginViewController {
         
         if username.isEmpty || password.isEmpty {
             configureView(withMessage: "Username / password cannot be blank")
+            return
+        }
+        
+        if username == "Kevin" && password == "Welcome" {
+            signInButton.configuration?.showsActivityIndicator = true
+            return
+        } else {
+            configureView(withMessage: "Inccorect username / password")
+            return
         }
     }
     
