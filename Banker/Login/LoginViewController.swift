@@ -11,6 +11,7 @@ class LoginViewController: UIViewController {
     
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
+    let errorMessageLablel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,19 @@ extension LoginViewController {
         signInButton.configuration?.imagePadding = 8
         signInButton.setTitle("Sign In", for: [])
         signInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
+        
+        errorMessageLablel.translatesAutoresizingMaskIntoConstraints = false
+        errorMessageLablel.textAlignment = .center
+        errorMessageLablel.textColor = .systemRed
+        errorMessageLablel.numberOfLines = 0
+        errorMessageLablel.text = "Error Failure"
+        errorMessageLablel.isHidden = false
     }
     
     private func layout() {
         view.addSubview(loginView)
         view.addSubview(signInButton)
+        view.addSubview(errorMessageLablel)
         
         // LoginView
         NSLayoutConstraint.activate([
@@ -49,6 +58,14 @@ extension LoginViewController {
             signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
             signInButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: signInButton.trailingAnchor, multiplier: 1)
+        ])
+        
+        // ErrorMessageLabel
+        NSLayoutConstraint.activate([
+            errorMessageLablel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            errorMessageLablel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
+            errorMessageLablel.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: errorMessageLablel.trailingAnchor, multiplier: 1)
         ])
 
     }
