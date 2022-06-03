@@ -14,6 +14,7 @@
 		C483CA91284908230004026E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA90284908230004026E /* LoginView.swift */; };
 		C483CA94284947800004026E /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA93284947800004026E /* OnboardingContainerViewController.swift */; };
 		C483CA962849521C0004026E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA952849521C0004026E /* OnboardingViewController.swift */; };
+		C483CA9828498C0C0004026E /* DummyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA9728498C0C0004026E /* DummyVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C483CA90284908230004026E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C483CA93284947800004026E /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		C483CA952849521C0004026E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		C483CA9728498C0C0004026E /* DummyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				C483CA7D28483D3B0004026E /* LoginViewController.swift */,
 				C483CA90284908230004026E /* LoginView.swift */,
+				C483CA9728498C0C0004026E /* DummyVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C483CA91284908230004026E /* LoginView.swift in Sources */,
+				C483CA9828498C0C0004026E /* DummyVC.swift in Sources */,
 				C483CA7E28483D3B0004026E /* LoginViewController.swift in Sources */,
 				C483CA962849521C0004026E /* OnboardingViewController.swift in Sources */,
 				C483CA7A28483D3B0004026E /* AppDelegate.swift in Sources */,

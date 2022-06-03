@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let loginViewController = LoginViewController()
     let onboardingContainerViewController = OnboardingContainerViewController()
+    let dummyViewController = DummyVC()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         loginViewController.delegate = self
         onboardingContainerViewController.delegateOn = self
+        dummyViewController.logoutDelegate = self
         
         window?.rootViewController = loginViewController
 //        window?.rootViewController = onboardingContainerViewController
@@ -40,7 +42,7 @@ extension AppDelegate: LoginViewControllerDelegate {
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
-        print("Did finishing onboarding")
+        setRootViewCOntroller(dummyViewController)
     }
 }
 
@@ -59,5 +61,11 @@ extension AppDelegate {
                           options: .transitionCrossDissolve,
                           animations: nil,
                           completion: nil)
+    }
+}
+
+extension AppDelegate: LogoutDelegate {
+    func didLogut() {
+        setRootViewCOntroller(loginViewController)
     }
 }
