@@ -7,15 +7,17 @@
 
 import UIKit
 
+let appColor: UIColor = .systemTeal
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var hasOnboarded = false
 
     let loginViewController = LoginViewController()
     let onboardingContainerViewController = OnboardingContainerViewController()
     let dummyViewController = DummyVC()
+    let mainViewController = MainViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -26,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         onboardingContainerViewController.delegateOn = self
         dummyViewController.logoutDelegate = self
 
-        window?.rootViewController = loginViewController
+        window?.rootViewController = mainViewController
+//        window?.rootViewController = loginViewController
 //        window?.rootViewController = onboardingContainerViewController
 //        window?.rootViewController = OnboardingViewController(imageName: "world", titleText: "peace to the world")
 
@@ -37,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
-        if hasOnboarded {
+        if LocalState.hasOnboarded {
             setRootViewCOntroller(dummyViewController)
         } else {
             setRootViewCOntroller(onboardingContainerViewController)
@@ -47,7 +50,7 @@ extension AppDelegate: LoginViewControllerDelegate {
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
-        hasOnboarded = true
+        LocalState.hasOnboarded = true
         setRootViewCOntroller(dummyViewController)
     }
 }
