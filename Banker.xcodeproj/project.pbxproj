@@ -15,6 +15,7 @@
 		C483CA94284947800004026E /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA93284947800004026E /* OnboardingContainerViewController.swift */; };
 		C483CA962849521C0004026E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA952849521C0004026E /* OnboardingViewController.swift */; };
 		C483CA9828498C0C0004026E /* DummyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA9728498C0C0004026E /* DummyVC.swift */; };
+		C483CA9B284BFF000004026E /* LogalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA9A284BFF000004026E /* LogalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C483CA93284947800004026E /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		C483CA952849521C0004026E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		C483CA9728498C0C0004026E /* DummyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVC.swift; sourceTree = "<group>"; };
+		C483CA9A284BFF000004026E /* LogalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogalState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		C483CA7828483D3B0004026E /* Banker */ = {
 			isa = PBXGroup;
 			children = (
+				C483CA99284BFEE90004026E /* Utils */,
 				C483CA92284947520004026E /* Onboarding */,
 				C483CA8E284907A50004026E /* Files */,
 				C483CA8F284907F90004026E /* Login */,
@@ -95,6 +98,14 @@
 				C483CA952849521C0004026E /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C483CA99284BFEE90004026E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C483CA9A284BFF000004026E /* LogalState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C483CA91284908230004026E /* LoginView.swift in Sources */,
+				C483CA9B284BFF000004026E /* LogalState.swift in Sources */,
 				C483CA9828498C0C0004026E /* DummyVC.swift in Sources */,
 				C483CA7E28483D3B0004026E /* LoginViewController.swift in Sources */,
 				C483CA962849521C0004026E /* OnboardingViewController.swift in Sources */,
