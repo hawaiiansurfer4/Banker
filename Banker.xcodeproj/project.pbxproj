@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C428BBEF284D144900FB7E11 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BBEE284D144900FB7E11 /* AccountSummaryCell.swift */; };
+		C428BBF1284D591A00FB7E11 /* DecimalUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BBF0284D591A00FB7E11 /* DecimalUtil.swift */; };
+		C428BBF3284D599400FB7E11 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BBF2284D599400FB7E11 /* CurrencyFormatter.swift */; };
 		C435DBA9284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435DBA8284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift */; };
 		C435DBAB284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C435DBAA284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib */; };
 		C483CA7A28483D3B0004026E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA7928483D3B0004026E /* AppDelegate.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		C428BBEE284D144900FB7E11 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
+		C428BBF0284D591A00FB7E11 /* DecimalUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtil.swift; sourceTree = "<group>"; };
+		C428BBF2284D599400FB7E11 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		C435DBA8284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		C435DBAA284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		C483CA7628483D3B0004026E /* Banker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +140,8 @@
 			children = (
 				C483CA9A284BFF000004026E /* LogalState.swift */,
 				C483CA9C284C0BEC0004026E /* UIViewController+Utils.swift */,
+				C428BBF0284D591A00FB7E11 /* DecimalUtil.swift */,
+				C428BBF2284D599400FB7E11 /* CurrencyFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -224,7 +230,9 @@
 				C483CA9D284C0BEC0004026E /* UIViewController+Utils.swift in Sources */,
 				C483CA91284908230004026E /* LoginView.swift in Sources */,
 				C483CA9B284BFF000004026E /* LogalState.swift in Sources */,
+				C428BBF1284D591A00FB7E11 /* DecimalUtil.swift in Sources */,
 				C435DBA9284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift in Sources */,
+				C428BBF3284D599400FB7E11 /* CurrencyFormatter.swift in Sources */,
 				C483CA9828498C0C0004026E /* DummyVC.swift in Sources */,
 				C483CA7E28483D3B0004026E /* LoginViewController.swift in Sources */,
 				C428BBEF284D144900FB7E11 /* AccountSummaryCell.swift in Sources */,
