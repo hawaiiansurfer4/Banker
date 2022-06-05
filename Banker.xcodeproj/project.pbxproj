@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C428BBEF284D144900FB7E11 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BBEE284D144900FB7E11 /* AccountSummaryCell.swift */; };
 		C435DBA9284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435DBA8284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift */; };
 		C435DBAB284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C435DBAA284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib */; };
 		C483CA7A28483D3B0004026E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA7928483D3B0004026E /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C428BBEE284D144900FB7E11 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		C435DBA8284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		C435DBAA284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		C483CA7628483D3B0004026E /* Banker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +55,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C428BBEC284D13D100FB7E11 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				C435DBA8284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift */,
+				C435DBAA284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		C428BBED284D13FB00FB7E11 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C428BBEE284D144900FB7E11 /* AccountSummaryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C483CA6D28483D3B0004026E = {
 			isa = PBXGroup;
 			children = (
@@ -125,8 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				C483CAA1284C27FD0004026E /* AccountSummaryViewController.swift */,
-				C435DBA8284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift */,
-				C435DBAA284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib */,
+				C428BBEC284D13D100FB7E11 /* Header */,
+				C428BBED284D13FB00FB7E11 /* Cells */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -208,6 +227,7 @@
 				C435DBA9284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift in Sources */,
 				C483CA9828498C0C0004026E /* DummyVC.swift in Sources */,
 				C483CA7E28483D3B0004026E /* LoginViewController.swift in Sources */,
+				C428BBEF284D144900FB7E11 /* AccountSummaryCell.swift in Sources */,
 				C483CA962849521C0004026E /* OnboardingViewController.swift in Sources */,
 				C483CA9F284C0F420004026E /* MainViewController.swift in Sources */,
 				C483CAA2284C27FD0004026E /* AccountSummaryViewController.swift in Sources */,
