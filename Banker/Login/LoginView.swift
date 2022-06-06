@@ -40,13 +40,14 @@ extension LoginView {
         usernameTextField.placeholder = "Username"
         usernameTextField.delegate = self
         
+        dividerView.translatesAutoresizingMaskIntoConstraints = false
+        dividerView.backgroundColor = .secondarySystemFill
+        
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
         passwordTextField.delegate = self
-        
-        dividerView.translatesAutoresizingMaskIntoConstraints = false
-        dividerView.backgroundColor = .secondarySystemFill
+        passwordTextField.enablePasswordToggle()
         
         layer.cornerRadius = 5
         clipsToBounds = true
