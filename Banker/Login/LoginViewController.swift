@@ -31,6 +31,12 @@ class LoginViewController: UIViewController {
         return loginView.passwordTextField.text
     }
     
+    var leadingEdgeOnScreen: CGFloat = 16
+    var leadingEdgeOffScreen: CGFloat = -1000
+    
+    var titleLeadingAnchor: NSLayoutConstraint?
+    var subtitleLeadingAnchor: NSLayoutConstraint?
+    
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
 
@@ -44,10 +50,31 @@ class LoginViewController: UIViewController {
         super.viewDidDisappear(animated)
         signInButton.configuration?.showsActivityIndicator = false
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
+    }
 }
 
 extension LoginViewController {
     private func style() {
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = .systemRed
+        titleLabel.font = .systemFont(ofSize: CGFloat(40))
+        titleLabel.numberOfLines = 1
+        titleLabel.text = "Banker"
+        titleLabel.alpha = 0
+        
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.textColor = .systemRed
+        subtitleLabel.font = .systemFont(ofSize: CGFloat(30))
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.text = "Your premium source for all things banking!"
+        subtitleLabel.alpha = 0
+        
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -61,20 +88,6 @@ extension LoginViewController {
         errorMessageLablel.textColor = .systemRed
         errorMessageLablel.numberOfLines = 0
         errorMessageLablel.isHidden = true
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textAlignment = .center
-        titleLabel.textColor = .systemRed
-        titleLabel.font = .systemFont(ofSize: CGFloat(40))
-        titleLabel.numberOfLines = 1
-        titleLabel.text = "Banker"
-        
-        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        subtitleLabel.textAlignment = .center
-        subtitleLabel.textColor = .systemRed
-        subtitleLabel.font = .systemFont(ofSize: CGFloat(30))
-        subtitleLabel.numberOfLines = 0
-        subtitleLabel.text = "Your premium source for all things banking!"
     }
     
     private func layout() {
@@ -86,19 +99,21 @@ extension LoginViewController {
         
         // Title Label
         NSLayoutConstraint.activate([
-//            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            titleLabel.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 20),
-            titleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: titleLabel.trailingAnchor, multiplier: 1)
+            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
+            titleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
+        
+        titleLeadingAnchor = titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        titleLeadingAnchor?.isActive = true
         
         // Subtitle Label
         NSLayoutConstraint.activate([
-//            subtitleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 1),
-            subtitleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: subtitleLabel.trailingAnchor, multiplier: 1)
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 3),
+            subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
+        
+        subtitleLeadingAnchor = subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        subtitleLeadingAnchor?.isActive = true
 
         // LoginView
         NSLayoutConstraint.activate([
@@ -158,6 +173,36 @@ extension LoginViewController {
     private func configureView(withMessage message: String) {
         errorMessageLablel.isHidden = false
         errorMessageLablel.text = message
+    }
+}
+
+extension LoginViewController {
+    private func animate() {
+        let duration = 2.0
+        let animator1 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.titleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator1.startAnimation()
+        
+        let animator2 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+            self.subtitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        
+        animator2.startAnimation(afterDelay: 1)
+        
+        let animator3 = UIViewPropertyAnimator(duration: duration*2, curve: .easeInOut) {
+            self.titleLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator3.startAnimation(afterDelay: 1)
+        
+        let animator4 = UIViewPropertyAnimator(duration: duration*2, curve: .easeInOut) {
+            self.subtitleLabel.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator4.startAnimation(afterDelay: 1)
     }
 }
 
