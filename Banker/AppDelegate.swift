@@ -27,38 +27,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate = self
         onboardingContainerViewController.delegateOn = self
         
-        let vc = mainViewController
-        vc.setStatusBar()
-        
+        displayLogin()
+        return true
+    }
+    
+    private func displayLogin() {
+        setRootViewController(loginViewController)
+    }
+    
+    private func displayNextScreen() {
+        if LocalState.hasOnboarded {
+            prepMainView()
+            setRootViewController(mainViewController)
+        } else {
+            setRootViewController(onboardingContainerViewController)
+        }
+    }
+    
+    private func prepMainView() {
+        mainViewController.setStatusBar()
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().backgroundColor = appColor
-        
-        window?.rootViewController = vc
-        
-        return true
     }
 
 }
 
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
-        if LocalState.hasOnboarded {
-            setRootViewCOntroller(mainViewController)
-        } else {
-            setRootViewCOntroller(onboardingContainerViewController)
-        }
+        displayNextScreen()
     }
 }
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
-        setRootViewCOntroller(mainViewController)
+        prepMainView()
+        setRootViewController(mainViewController)
     }
 }
 
 extension AppDelegate {
-    func setRootViewCOntroller(_ vc: UIViewController, animated: Bool = true) {
+    func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
         guard animated, let window = self.window else {
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
@@ -77,6 +86,6 @@ extension AppDelegate {
 
 extension AppDelegate: LogoutDelegate {
     func didLogut() {
-        setRootViewCOntroller(loginViewController)
+        setRootViewController(loginViewController)
     }
 }
