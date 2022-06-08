@@ -24,6 +24,8 @@
 1. Login - Has a login screen that allows you to toggle if you want to see your password as you type it or keep it hidden along with some animations that will improve user experience from animating the title and subtitle sliding in to shaking the login button when an incorrect username and password is typed in along with showing an error message
 2. Account Summary View - Summarizes all of the accounts and distingueshes each account not only by name but also by color of a account type underline. This also has stylized the balance information and a skeleton loader where the information area will shimmer while the information is being loaded. 
 3. Pull to refresh - Allows the user to pull down to refresh the information and shows the skeleton loader while information is loading
+4. Onboarding area - Gives the user an onboarding section to tell what the app does for them and remembers if they have already been onboarded or not so the user will only go through the process once
+
 
 ## Unit Tests
 * AccountSummaryViewController tests
