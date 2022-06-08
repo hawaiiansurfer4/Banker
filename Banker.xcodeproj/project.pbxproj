@@ -20,6 +20,8 @@
 		C428BC13284EC48000FB7E11 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BC12284EC48000FB7E11 /* AccountTests.swift */; };
 		C428BC15284ED5EB00FB7E11 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BC14284ED5EB00FB7E11 /* SkeletonLoadable.swift */; };
 		C428BC17284ED7BA00FB7E11 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BC16284ED7BA00FB7E11 /* SkeletonCell.swift */; };
+		C428BC1A284FD4CF00FB7E11 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BC19284FD4CF00FB7E11 /* ProfileManager.swift */; };
+		C428BC1C284FED7100FB7E11 /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BC1B284FED7100FB7E11 /* AccountSummaryViewControllerTests.swift */; };
 		C435DBA9284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435DBA8284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift */; };
 		C435DBAB284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C435DBAA284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib */; };
 		C483CA7A28483D3B0004026E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483CA7928483D3B0004026E /* AppDelegate.swift */; };
@@ -61,6 +63,8 @@
 		C428BC12284EC48000FB7E11 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		C428BC14284ED5EB00FB7E11 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		C428BC16284ED7BA00FB7E11 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		C428BC19284FD4CF00FB7E11 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		C428BC1B284FED7100FB7E11 /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		C435DBA8284CFEFB00C97EA1 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		C435DBAA284CFF0B00C97EA1 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		C483CA7628483D3B0004026E /* Banker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,8 +150,17 @@
 			children = (
 				C428BC10284EC2EE00FB7E11 /* ProfileTests.swift */,
 				C428BC12284EC48000FB7E11 /* AccountTests.swift */,
+				C428BC1B284FED7100FB7E11 /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		C428BC18284FD48A00FB7E11 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C428BC19284FD4CF00FB7E11 /* ProfileManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		C483CA6D28483D3B0004026E = {
@@ -233,6 +246,7 @@
 				C428BC0C284EADA200FB7E11 /* AccountSummaryViewController+Networking.swift */,
 				C428BBEC284D13D100FB7E11 /* Header */,
 				C428BBED284D13FB00FB7E11 /* Cells */,
+				C428BC18284FD48A00FB7E11 /* Networking */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -342,6 +356,7 @@
 				C428BC02284D827200FB7E11 /* CurrencyFormatterTests.swift in Sources */,
 				C428BC13284EC48000FB7E11 /* AccountTests.swift in Sources */,
 				C428BC11284EC2EE00FB7E11 /* ProfileTests.swift in Sources */,
+				C428BC1C284FED7100FB7E11 /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +367,7 @@
 				C483CA9D284C0BEC0004026E /* UIViewController+Utils.swift in Sources */,
 				C428BC17284ED7BA00FB7E11 /* SkeletonCell.swift in Sources */,
 				C428BC0B284EAC3300FB7E11 /* Date+Utils.swift in Sources */,
+				C428BC1A284FD4CF00FB7E11 /* ProfileManager.swift in Sources */,
 				C483CA91284908230004026E /* LoginView.swift in Sources */,
 				C483CA9B284BFF000004026E /* LogalState.swift in Sources */,
 				C428BBF1284D591A00FB7E11 /* Decimal+Util.swift in Sources */,
