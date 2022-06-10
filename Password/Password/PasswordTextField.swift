@@ -39,7 +39,6 @@ class PasswordTextField: UIView {
 extension PasswordTextField {
     func style() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .systemOrange
         
         lockImageView.translatesAutoresizingMaskIntoConstraints = false
         

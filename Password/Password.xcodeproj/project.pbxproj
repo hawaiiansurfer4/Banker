@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C42453C42853955C007B8B7D /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42453C32853955B007B8B7D /* PasswordCriteriaView.swift */; };
+		C42453C62853B5CF007B8B7D /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42453C52853B5CE007B8B7D /* PasswordStatusView.swift */; };
 		C428BC92285250F400FB7E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BC91285250F400FB7E11 /* AppDelegate.swift */; };
 		C428BC96285250F400FB7E11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428BC95285250F400FB7E11 /* ViewController.swift */; };
 		C428BC9B285250F500FB7E11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C428BC9A285250F500FB7E11 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		C42453C32853955B007B8B7D /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
+		C42453C52853B5CE007B8B7D /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 		C428BC8E285250F400FB7E11 /* Password.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Password.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C428BC91285250F400FB7E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C428BC95285250F400FB7E11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				C42453C32853955B007B8B7D /* PasswordCriteriaView.swift */,
+				C42453C52853B5CE007B8B7D /* PasswordStatusView.swift */,
 			);
 			name = PasswordStatusView;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				C428BC96285250F400FB7E11 /* ViewController.swift in Sources */,
 				C428BC92285250F400FB7E11 /* AppDelegate.swift in Sources */,
 				C42453C42853955C007B8B7D /* PasswordCriteriaView.swift in Sources */,
+				C42453C62853B5CF007B8B7D /* PasswordStatusView.swift in Sources */,
 				C428BCA7285251D300FB7E11 /* PasswordTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
